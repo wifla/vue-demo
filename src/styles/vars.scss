@@ -22,6 +22,7 @@ $primary-gray: #999999;
   -o-justify-content: $justify;
   justify-content: $justify;
   -ms-flex-pack: $justify;
+  //兼容IE10
   @if $justify == space-around {
     -ms-flex-pack: justify;
   } @else if $justify == space-between{
@@ -41,6 +42,7 @@ $primary-gray: #999999;
   -o-align-items: $align;
   align-items: $align;
   -ms-flex-align: $align;
+  //兼容IE10
   @if $align == stretch  {
     -ms-flex-align: stretch ;
   } @else if $align == center{
@@ -57,14 +59,8 @@ $primary-gray: #999999;
 
 }
 
-@mixin primaryBtn(){
-	   width: 140px;
-    height: 50px;
-    box-sizing: border-box;
-    border: 1px solid $primary-blue;
-    color: #fff;
-    font-weight: 500;
-    font-size: 20px;
-    background: $primary-blue;
+@function px2rem($value) {
+  $rem: 75px;
+  @return ($value / $rem) + rem;
 }
 
