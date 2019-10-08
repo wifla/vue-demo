@@ -1,8 +1,8 @@
 {
-  "name": "msg-admin",
+  "name": "vue-demo",
   "version": "1.0.0",
-  "description": "vue admin project",
-  "author": "lin",
+  "description": "vue-demo project",
+  "author": "wifla",
   "license": "",
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -71,7 +71,7 @@
   },
   "browserslist": [
     "> 1%",
-    "last 10 versions",
+    "last 2 versions",
     "not ie <= 8"
   ]
 }
