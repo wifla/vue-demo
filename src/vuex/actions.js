@@ -1,6 +1,7 @@
-export const increment = ({commit}) => {
-    commit('INCREMENT')
+import types from './types'
+const actions = {
+	[types.INCREMENT]({commit}){
+	    commit(types.INCREMENT)
+	}
 }
-export const decrement = ({commit}) => {
-    commit('DECREMENT')
-}
+export default actions;
