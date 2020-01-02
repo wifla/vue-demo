@@ -20,6 +20,8 @@
 <style scoped  lang="less">
 	@import '~scss_vars';
 	.container{
-		.px2rem(font-size, 30);
+		font-size: 30px;
+		background: red;
+		width: 375px;
 	}
 </style>
