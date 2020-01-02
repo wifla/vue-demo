@@ -10,13 +10,11 @@ import store from './vuex/index'
 
 import 'font-awesome/css/font-awesome.min.css'
 import VePie from 'v-charts/lib/pie.common.js'
+import 'lib-flexible/flexible'
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.component(VePie.name, VePie)
-
-
-
 
 export default new Vue({
   router,

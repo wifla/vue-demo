@@ -17,13 +17,11 @@
 	}
 </script>
 
-<style scoped  lang="scss">
+<style scoped  lang="less">
 	@import '~scss_vars';
 	.container{
-		@include flexMixin(row,center,center);
-		font-size: px2rem(28px);
-		width: px2rem(500px);
-		height: px2rem(500px);
+		font-size: 30px;
 		background: red;
+		width: 375px;
 	}
 </style>

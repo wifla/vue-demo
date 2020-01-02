@@ -2,6 +2,7 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+const LessFunc = require('less-plugin-functions');
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -24,7 +25,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'reset': '@/styles/reset.css',
-      'scss_vars': '@/styles/vars.scss'
+      'scss_vars': '@/styles/vars.less'
     }
   },
   module: {
@@ -54,7 +55,15 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      {
+        test: /\.less$/,
+        loader: "style-loader!css-loader!less-loader",
+        options: {
+          javascriptEnabled: true,
+          plugins: [ new LessFunc() ]
+        }
+      },
     ]
   }
 }

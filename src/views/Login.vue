@@ -5,6 +5,6 @@
 
 <script></script>
 
-<style lang="scss" >
+<style lang="less" >
 @import '~scss_vars';
 </style>

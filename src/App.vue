@@ -19,7 +19,7 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="less">
 @import '~scss_vars';
 @import '~reset';
 
@@ -27,15 +27,13 @@ body {
 	margin: 0px;
 	padding: 0px;
 	font-family:Source Han Sans CN, Microsoft YaHei, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,  SimSun, sans-serif;
-	font-size: px2rem(14px);
 	-webkit-font-smoothing: antialiased;
-    color: $primary-black;
+    color: @primary-black;
 }
 #app {
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
 	width: 100%;
-	@include flexMixin(row,center,center);
 }
 </style>

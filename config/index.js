@@ -31,11 +31,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/demo': {
+        '/index': {
                 target: "http://localhost:9999", //开发环境
                 changeOrigin: true,
                 pathRewrite: {
-                    
+                    '^/index': '/index' 
                 }
             }
         
