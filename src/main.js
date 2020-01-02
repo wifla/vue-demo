@@ -15,9 +15,6 @@ Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.component(VePie.name, VePie)
 
-
-
-
 export default new Vue({
   router,
   store,

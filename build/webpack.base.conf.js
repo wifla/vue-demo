@@ -24,7 +24,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'reset': '@/styles/reset.css',
-      'scss_vars': '@/styles/vars.scss'
+      'scss_vars': '@/styles/vars.less'
     }
   },
   module: {
@@ -54,7 +54,14 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      {
+        test: /\.less$/,
+        loader: "style-loader!css-loader!less-loader",
+        options: {
+          javascriptEnabled: true
+        }
+      },
     ]
   }
 }
